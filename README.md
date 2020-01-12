@@ -10,3 +10,4 @@ There are 5 courses included in this specialization:
 - Sequence Models
 ## Specialzation Certificate
 [view certificate](https://www.coursera.org/account/accomplishments/specialization/BMUTXQBBQXUD)
+[](certificate_demi.png)
