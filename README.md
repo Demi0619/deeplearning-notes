@@ -9,5 +9,7 @@ There are 5 courses included in this specialization:
 - Convolutional Neural Networks
 - Sequence Models
 ## Specialzation Certificate
+
 [view certificate](https://www.coursera.org/account/accomplishments/specialization/BMUTXQBBQXUD)
-[](certificate_demi.png)
+
+![](certificate_demi.png)
