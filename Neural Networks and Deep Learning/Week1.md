@@ -26,7 +26,7 @@ From other references (a more conceptive explanation):
 
 Terminologies to take away:
 
-**RELU**(Rectified Linear Unit), is a type of activation function. Mathematically, it is defined as **y = max(0, x)**. Visually, it looks like the following: 
+**RELU**(Rectified Linear Unit),a type of activation function. Mathematically, it is defined as **y = max(0, x)**. Visually,it looks like: 
 ![](images/relu.png)
 
 ReLU is the most commonly used activation function in neural networks, especially in CNNs.
