@@ -56,7 +56,7 @@ Structured data: basically databases of data. Each of the feature has a very wel
 Unstructured data:  has no pre-defined format or organization, making it much more difficult to collect, process, and analyze. like audio,image,text.
 ## Why is Deep Learning taking off
 
-[](images/scale_data.png)
+![](images/scale_data.png)
 1. Data
   - For small traning sets, different algrithms can have similar performance. 
   - For larger traning sets, basically all different algrithms can have relatively higher performance than smaller data size,     but obviously medium/large NN dominating the other approches.
