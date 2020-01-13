@@ -25,9 +25,11 @@ From other references (a more conceptive explanation):
 > A neural network is a series of algorithms that endeavors to recognize **underlying relationships in a set of data** through a process that mimics the way the human brain operates. Neural networks can **adapt to changing input**; so the network generates the best possible result without needing to redesign the output criteria.
 
 Terminologies to take away:
+
 **RELU**(Rectified Linear Unit), is a type of activation function. Mathematically, it is defined as **y = max(0, x)**. Visually, it looks like the following: 
-![](images/Relu.png)
+![](images/relu.png)
 
 ReLU is the most commonly used activation function in neural networks, especially in CNNs.
+
 **Activation function**.In artificial neural networks, the activation function of a node defines the output of that node given an input or set of inputs. With it, NN can learn and make sense of something really **complicated and Non-linear complex functional mappings** between the inputs and response variable.They introduce **non-linear properties** to our Network.
 
