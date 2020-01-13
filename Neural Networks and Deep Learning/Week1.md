@@ -2,8 +2,8 @@ This is the first course of the specialzation, required 4 weeks' study, here lis
 
 - [Introduction to Deep Learning](#introduction_to_deep_learning)
    - [What is a Neural Network](#what_is_a_neural_network)
-   - [Supervised Learning with Neural Networks]
-   - [Why is Deep Learning taking off]
+   - [Supervised Learning with Neural Networks](#supervised_learning_with_neural_networks)
+   - [Why is Deep Learning taking off](#why_is_deep_learning_taking_off)
 
 ## Introduction to Deep Learning
 Learning objective: 
@@ -17,12 +17,17 @@ From lecture (a more figurative explanation through example):
 A simple neural network: predict house price (Y) with house size (X). The circle which represents a single **neuron** in the neural network implements the predict function.
 ![](images/simple_nn.png)
 
-A larger neural network: predict house price (Y) with house size(x1), # of bedrooms(x2),zipcode(x3) and wealth(x4). Instead of predict by a single neuron, there is a hidden layer with multiple neurons to process the raw inputs.
+A larger neural network: predict house price (Y) with house size(x1), # of bedrooms(x2),zipcode(x3) and wealth(x4). Instead of predict by a single neuron, there is a **hidden layer** with multiple neurons to process the raw inputs.
+Every input layer feature is interconnected with every hidden layer feature.
 ![](images/larger_nn.png)
 
 From other references (a more conceptive explanation):
 
 > A neural network is a series of algorithms that endeavors to recognize **underlying relationships in a set of data** through a process that mimics the way the human brain operates. Neural networks can **adapt to changing input**; so the network generates the best possible result without needing to redesign the output criteria.
+
+A typical neural network with more than 1 hidden layer looks like:
+
+![](images/typical_nn.jpeg)
 
 ### Terminologies to take away:
 
@@ -32,4 +37,23 @@ From other references (a more conceptive explanation):
 ReLU is the most commonly used activation function in neural networks, especially in CNNs.
 
 **Activation function**.In artificial neural networks, the activation function of a node defines the output of that node given an input or set of inputs. With it, NN can learn and make sense of something really **complicated and Non-linear complex functional mappings** between the inputs and response variable.They introduce **non-linear properties** to our Network.
+
+## Supervised learning with Neural Networks
+### Supervised learning defination
+
+From lecture: have some input X, learn a function mappping to some output Y.
+
+Addition: Supervised learning infers a function from **labeled** training data consisting of a set of training examples. With constrast to **unsupervised learning**, which is modeling the underlying or hidden structure or distribution in the data,you only have input data and no corresponding output variables.
+
+### Different types of Neural Networks for supervised learning:
+- Standard NN (mainly used for structured data)
+- CNN(Convolutional NN)(mainly used for computer vision)
+- RNN(Recurrent NN)(mainly used for sequence data like audio/NLP)
+
+### Structured and Unstructured data:
+Structured data: basically databases of data. Each of the feature has a very well defined meaning.
+
+Unstructured data:  has no pre-defined format or organization, making it much more difficult to collect, process, and analyze. like audio,image,text.
+
+
 
