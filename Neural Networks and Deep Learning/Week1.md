@@ -1,6 +1,6 @@
 This is the first course of the specialzation, required 4 weeks' study, here list the week 1's main content:
 
-- [Introduction to Deep Learning](#introduction_to_deep_learning)
+- [Introduction to Deep Learning](#introduction-to-deep-learning)
    - [What is a Neural Network](#what_is_a_neural_network)
    - [Supervised Learning with Neural Networks](#supervised_learning_with_neural_networks)
    - [Why is Deep Learning taking off](#why_is_deep_learning_taking_off)
