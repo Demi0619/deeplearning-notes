@@ -1,9 +1,9 @@
 This is the first course of the specialzation, required 4 weeks' study, here list the week 1's main content:
 
 - [Introduction to Deep Learning](#introduction-to-deep-learning)
-   - [What is a Neural Network](#what_is_a_neural_network)
-   - [Supervised Learning with Neural Networks](#supervised_learning_with_neural_networks)
-   - [Why is Deep Learning taking off](#why_is_deep_learning_taking_off)
+   - [What is a Neural Network](#what-is-a-neural-network)
+   - [Supervised Learning with Neural Networks](#supervised-learning-with-neural-networks)
+   - [Why is Deep Learning taking off](#why-is-deep-learning-taking-off)
 
 ## Introduction to Deep Learning
 Learning objective: 
@@ -54,6 +54,16 @@ Addition: Supervised learning infers a function from **labeled** training data c
 Structured data: basically databases of data. Each of the feature has a very well defined meaning.
 
 Unstructured data:  has no pre-defined format or organization, making it much more difficult to collect, process, and analyze. like audio,image,text.
+## Why is Deep Learning taking off
+
+[](images/scale_data.png)
+1. Data
+  - For small traning sets, different algrithms can have similar performance. 
+  - For larger traning sets, basically all different algrithms can have relatively higher performance than smaller data size,     but obviously medium/large NN dominating the other approches.
+ 2. Computation
+ 3. Algrithm
+    Many algrithm innovations appeared when trying to make the NN run faster. Eg, change from sigmoid to Relu to address the     gradient vanishing problem.
+ 
 
 
 
