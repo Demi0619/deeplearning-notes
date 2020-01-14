@@ -2,7 +2,7 @@ This is the week 2 materials for course 1. Here list the main contents:
 - [Neural Network Basics](#neural-network-basics)
  - [Logistic Regression as a Neural Network](#logistic-regression-as-a-neural-network)
    - [Binary classification](#binary-classification)
-   - [Logistic Regression](#logistic-regresssion)
+   - [Logistic Regression](#logistic-regression)
    - [Logistic Regression Cost Function](#logstic-regression-cost-function)
    - [Gradient Descent](#gradient-descent)
    - [Derivatives](#derivatives)
@@ -21,7 +21,9 @@ This is the week 2 materials for course 1. Here list the main contents:
 Logistic Regression is an algrithm for binary classification. eg. input features of an image(x) to classify whether it's a cat (y=1) or not (y=0)
 
 **Binary Classification**: the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule.
-   ! [](images/binary.png)
+
+   ![](images/binary.png)
+   
 Some notation rules:
 - M: number of examples, M_train/M_test.
 - X: uppercase X, reprensent the input of the whole training set, X.shape=(NX,M).NX is the number of input's features, eg,the pixel of images.
@@ -29,8 +31,25 @@ Some notation rules:
 ### Logistic Regression
 Logistic Regression is a learning algrithm used in a supervised learning when the output Y is either 0 or 1 (binary classification)
 
-Given parameters W and real number b, simple linear regression will calaculate y_hat=W_transpose*X+b (which can be any value). But, for logistic regression which only expect 0/1,a sigmoid function is applied.
-y_hat= sigmoid(W_transpose+b)
+Given parameters W and real number b, simple linear regression will calaculate y_hat=W_transpose*x+b (which can be any value). But, for logistic regression which only expect 0/1,a sigmoid function is applied.
+y_hat= sigmoid(W_transpose*x+b)
 
 **Sigmoid function**
 ![](images/sigmoid.png)
+### Logistic Regression Cost Function
+We need to define a cost function to tain the parameters W and b. The cost function is to measure how close is the predict y_hat to the ground truth y.
+
+**Cost function vs Loss function**
+Loss function is the error for a single training example. Cost function is the average of the loss function of the entire training set. So we talk about loss function first.
+
+Use simple 'square error' for loss function seems not work well for logistic regression, as it leads to an non-convex optimation and thus may not able to finc the global optimal with gradient descent.
+
+Instead we will use the **Cross-entropy loss function**. Let's explain why this loss function makes sense.
+
+[](images/loss.png)
+[](images/cross.png)
+
+- if y=1: L=-log(y_hat), if we want the loss to be small, then the log(y_nat) to be large, y_hat to be large, from above y_hat=sigmoid(W_transpose*x+b) with maxmium value close to 1
+- if y=0: L=-log(1-y_hat), want L to be small, then log(1-y_hat) to be large, y_hat to be small, y_hat with minimum close to 0.
+From loss function to compute cost function: **J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=-(1/m)*sum(y[i]log(y_hat[i])+(1-y[i])log(1-y_hat[i]))**
+
