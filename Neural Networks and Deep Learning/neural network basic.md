@@ -58,9 +58,11 @@ From loss function to compute cost function: `J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=
 We use gradient descent to learn the parameters W and b and thus minimize the cost.
 
 ![](images/gradient.gif)
+
 Repeat: 
 
   `W := W-alpha*dw` (':=' means update W with; 'alpha' refers to learning rate, 'dw' is the partial derivtive of w on cost function J.
+  
   `b := b-alpha*db`  ('db' is the partial derivative of b on cost function J)  
     
    derivative and partial derivative will be explained in next chapter.
