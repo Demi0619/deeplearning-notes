@@ -32,7 +32,7 @@ Some notation rules:
 Logistic Regression is a learning algrithm used in a supervised learning when the output Y is either 0 or 1 (binary classification)
 
 Given parameters W and real number b, simple linear regression will calaculate y_hat=W_transpose*x+b (which can be any value). But, for logistic regression which only expect 0/1,a sigmoid function is applied.
-y_hat= sigmoid(W_transpose*x+b)
+`y_hat= sigmoid(W_transpose*x+b)`
 
 **Sigmoid function**
 ![](images/sigmoid.png)
@@ -51,5 +51,6 @@ Instead we will use the **Cross-entropy loss function**. Let's explain why this 
 
 - if y=1: `L=-log(y_hat)`, if we want the loss to be small, then the `log(y_nat)` to be large, `y_hat` to be large, from above y_hat=sigmoid(W_transpose*x+b) with maxmium value close to 1
 - if y=0: `L=-log(1-y_hat)`, want L to be small, then `log(1-y_hat)` to be large, `y_hat` to be small, y_hat with minimum close to 0.
-From loss function to compute cost function: **J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=-(1/m)*sum(y[i]log(y_hat[i])+(1-y[i])log(1-y_hat[i]))**
+
+From loss function to compute cost function: `J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=-(1/m)*sum(y[i]log(y_hat[i])+(1-y[i])log(1-y_hat[i]))`
 
