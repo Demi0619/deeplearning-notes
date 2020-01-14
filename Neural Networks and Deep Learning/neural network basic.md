@@ -81,3 +81,5 @@ Computation graph for forward(left to right) process.
 Computation graph for backward(right to left) process, also the computation for derivatives.
 
 ![](images/back.png)
+### Logistic Regression Gradient Descent
+![](images/LR-derivative.png)
