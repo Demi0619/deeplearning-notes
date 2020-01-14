@@ -3,7 +3,7 @@ This is the week 2 materials for course 1. Here list the main contents:
  - [Logistic Regression as a Neural Network](#logistic-regression-as-a-neural-network)
    - [Binary classification](#binary-classification)
    - [Logistic Regression](#logistic-regression)
-   - [Logistic Regression Cost Function](#logstic-regression-cost-function)
+   - [Logistic Regression Cost Function](#logistic-regression-cost-function)
    - [Gradient Descent](#gradient-descent)
    - [Derivatives](#derivatives)
    - [Computation Graph](#computation-graph)
@@ -46,10 +46,10 @@ Use simple 'square error' for loss function seems not work well for logistic reg
 
 Instead we will use the **Cross-entropy loss function**. Let's explain why this loss function makes sense.
 
-[](images/loss.png)
-[](images/cross.png)
+![](images/loss.png)
+![](images/cross.png)
 
-- if y=1: L=-log(y_hat), if we want the loss to be small, then the log(y_nat) to be large, y_hat to be large, from above y_hat=sigmoid(W_transpose*x+b) with maxmium value close to 1
-- if y=0: L=-log(1-y_hat), want L to be small, then log(1-y_hat) to be large, y_hat to be small, y_hat with minimum close to 0.
+- if y=1: `L=-log(y_hat)`, if we want the loss to be small, then the `log(y_nat)` to be large, `y_hat` to be large, from above y_hat=sigmoid(W_transpose*x+b) with maxmium value close to 1
+- if y=0: `L=-log(1-y_hat)`, want L to be small, then `log(1-y_hat)` to be large, `y_hat` to be small, y_hat with minimum close to 0.
 From loss function to compute cost function: **J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=-(1/m)*sum(y[i]log(y_hat[i])+(1-y[i])log(1-y_hat[i]))**
 
