@@ -21,7 +21,7 @@ This is the week 2 materials for course 1. Here list the main contents:
 Logistic Regression is an algrithm for binary classification. eg. input features of an image(x) to classify whether it's a cat (y=1) or not (y=0)
 
 **Binary Classification**: the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule.
-   ! [](images/binary.jfif)
+   ! [](images/binary.png)
 Some notation rules:
 - M: number of examples, M_train/M_test.
 - X: uppercase X, reprensent the input of the whole training set, X.shape=(NX,M).NX is the number of input's features, eg,the pixel of images.
