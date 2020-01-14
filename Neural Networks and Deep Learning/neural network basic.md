@@ -71,4 +71,13 @@ Repeat:
 
 ![](images/derivative.png)
 
->In mathematics, a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the others held constant. Eg. J(w,b) with 2 variables(w,b), when consider dw,with b hold constant.
+>In mathematics, a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the others held constant. 
+Eg. J(w,b) with 2 variables(w,b), when consider dw,with b hold constant.
+### Computation Graph
+Computation graph for forward(left to right) process.
+
+![](images/forward.png)
+
+Computation graph for backward(right to left) process, also the computation for derivatives.
+
+![](images/back.png)
