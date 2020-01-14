@@ -82,4 +82,26 @@ Computation graph for backward(right to left) process, also the computation for 
 
 ![](images/back.png)
 ### Logistic Regression Gradient Descent
+Eg. There is a traning example with 2 features `x1, x2`, parameters`w1,w2,b`.
+
 ![](images/LR-derivative.png)
+### Gradient Descent on m Examples
+In the above chapter, we calculate dw1,dw2 and db for a single traning example x[i] based on a loss function `L`.As follows:
+`dz[i]=a[i]-y[i]`
+
+`dw1[i]=x1[i]*dz[i]`
+
+`dw2[i]=x2[i]*dz[i]`
+
+`db[i]=dz[i]`
+
+If there are `m` trianing examples in the traning set. With cost function `J=(1/m)*sum(L)`. Then,
+
+`dw1=(1/m)*sum(dw1[i])`
+
+`dw2=(1/m)*sum(dw2[i])`
+
+`db=(1/m)*sum(db[i])`
+
+![](images/m_example.png)
+
