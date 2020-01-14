@@ -54,13 +54,13 @@ Instead we will use the **Cross-entropy loss function**. Let's explain why this 
 
 From loss function to compute cost function: `J(w,b)=(1/m)*sum(l(y[i],y_hat[i])=-(1/m)*sum(y[i]log(y_hat[i])+(1-y[i])log(1-y_hat[i]))`
 ### Gradient Descent
-Gradient descent is an optimization algorithm used to minimize some function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient.
+> Gradient descent is an optimization algorithm used to minimize some function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient.
 We use gradient descent to learn the parameters W and b and thus minimize the cost.
 
 ![](images/gradient.gif)
 Repeat: 
 
-    `W := W-alpha*dw` (':=' means update W with; 'alpha' refers to learning rate, 'dw' is the partial derivtive of w on cost function J.
-    `b := b-alpha*db` ('db' is the partial derivative of b on cost function J)  
+  `W := W-alpha*dw` (':=' means update W with; 'alpha' refers to learning rate, 'dw' is the partial derivtive of w on cost function J.
+  `b := b-alpha*db`  ('db' is the partial derivative of b on cost function J)  
     
-    derivative and partial derivative will be explained in next chapter.
+   derivative and partial derivative will be explained in next chapter.
