@@ -66,3 +66,9 @@ Repeat:
   `b := b-alpha*db`  ('db' is the partial derivative of b on cost function J)  
     
    derivative and partial derivative will be explained in next chapter.
+### Derivatives
+> In mathematics, the derivative is a way to show **rate of change**: that is, the amount by which a function is changing at one given point. For functions that act on the real numbers, it is the **slope** of the tangent line at a point on a graph.
+
+![](images/derivative.png)
+
+>In mathematics, a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the others held constant. Eg. J(w,b) with 2 variables(w,b), when consider dw,with b hold constant.
