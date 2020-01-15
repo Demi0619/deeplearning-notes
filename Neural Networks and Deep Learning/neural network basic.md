@@ -105,3 +105,29 @@ If there are `m` trianing examples in the traning set. With cost function `J=(1/
 
 ![](images/m_example.png)
 
+There are 2 explicit inner loops in this algrithm: from 1 to m training examples; from w1 to wn feature wights. for loop will make the calculation rather slow for big dataset. Vectorization can get rif of such loops.
+## Python and Vectorizaion
+### Vectorization
+Use **Numpy** (dot) libiary for vectorization. Eg, `z=np.dot(W_transpose,x)+b`
+
+Neural network programming guideline: Whenever possible, avoid explicit for loops. Eg, V is a vector, want U to be exponential of every components of V. `U=np.exp(V)`
+### Vectoring logistic regerssion
+Vectorize Forward propagation:
+
+`Z={z[1],z[2],z[3]...z[m]}={[w[1]_transpose*x[1]+b,w[2]_transpose*x[2]....}=W_transpose*X+b=np.dot(W_transpose,X)+b`
+
+`A={a[1],a[2],a[3]...a[m]}={sigmoid(z[1]),sigmoid(z[2])...}=sigmoid(Z)`
+
+lowercase repesent to single component, uppercase represent vector. b **broadcasting** to {b[1],b[2],...b[m]}
+
+Vectorize backward propagtion (gradient descent):
+
+`dZ={dz[1],dz[2]...dz[m]}={a[1]-y[1],a[2]-y[2],...}=A-Y`
+
+`dw[i]={dw1[i],dw2[i],...dwn[i]}={x1[1]*dz[i],x2[2]*dz[i]...}=x[i]*dz[i]` (verctorize x[i] to get rid of the for-loop for w1 to wn features)
+
+`dW=(1/m)*sum(dw[1],dw[2],...dw[m])=(1/m)*sum(x[1]*dz[1],x[2]*dz[2]...)=(1/m)*np.dot(X,dZ_transpose)`(vectorize dZ to get rid of the for-loop for 1 to m traning examples)
+
+`dB=(1/m)*sum(db[1],db[2]...db[m])=(1/m)*sum(dz[1],dz[2]...)=(1/m)*sum(dZ)`
+### Broadcasting in python
+
