@@ -131,3 +131,15 @@ Vectorize backward propagtion (gradient descent):
 `dB=(1/m)*sum(db[1],db[2]...db[m])=(1/m)*sum(dz[1],dz[2]...)=(1/m)*sum(dZ)`
 ### Broadcasting in python
 
+>The term broadcasting refers to how numpy treats arrays with different Dimension during arithmetic operations which lead to certain constraints, the smaller array is broadcast across the larger array so that they have compatible shapes.
+`A is a m*n matix, B is a 1*n vector, C is a m*1 vector`
+
+`if A "+,-,*,/" B, B will be copied m times (broadcasting) to be shape of m*n, then do the computation.`
+
+`if A "+,-,*,/" C, C will be copied n times to be shape of m*n as well.`
+
+Similar function in matlab/octave --bsxfun
+### Note on python and numpy
+Prevent to use **rank one array**, the matrix with shape like (n,).
+
+Use `assert(a.shape ==(m,n))` to check if your matrix with the correct dimension. Use `a=a.reshape((m,n))` to correct the dimension.
