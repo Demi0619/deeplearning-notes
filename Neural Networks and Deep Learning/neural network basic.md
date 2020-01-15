@@ -132,6 +132,7 @@ Vectorize backward propagtion (gradient descent):
 ### Broadcasting in python
 
 >The term broadcasting refers to how numpy treats arrays with different Dimension during arithmetic operations which lead to certain constraints, the smaller array is broadcast across the larger array so that they have compatible shapes.
+
 `A is a m*n matix, B is a 1*n vector, C is a m*1 vector`
 
 `if A "+,-,*,/" B, B will be copied m times (broadcasting) to be shape of m*n, then do the computation.`
