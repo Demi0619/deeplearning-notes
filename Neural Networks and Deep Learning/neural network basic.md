@@ -13,7 +13,7 @@ This is the week 2 materials for course 1. Here list the main contents:
    - [Vectorization](#vectorization)
    - [Vectorizing logistic regression](vectorizng-logistic-regression)
    - [Broadcasting in Python](#broadcasting-in-python)
-   - [Note on Python and Numpy](note-on-python-and-numpy)
+   - [Note on Python and Numpy](#note-on-python-and-numpy)
 # Neural Network Basics
 > Learn to set up a machine learning problem with a neural network mindset. Learn to use vectorization to speed up your models.
 ## Logistic Regression as a Neural Network
