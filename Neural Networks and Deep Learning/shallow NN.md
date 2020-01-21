@@ -28,6 +28,41 @@ A NN can be divided by 3 different layers: **Input Layer**(X);**Output Layer**(Y
 
 `# layers NN` '#' is defined by `# of hidden layers + output layers` (Input layer not counted)
 ## Computing a neural network's output
+Step by step calculation:
 
+Notation convention: `a[i]j` refers to the jth node of ith layer
+
+![](images/step.png)
+
+The top part calculate each node in hidden layer, while bottom part vectorizing X,W,b,Z,A.
+`X is the input, with shape(Nx,m)
+
+W1 is the weight parameter of L1, with shape(NL1,NL0) (Nl refers to the # of node in layer l)
+
+b1 is the bias parameter of L1, with shape(NL1,1)
+
+Z1 is the linear output of L1, with shape(NL1,m)
+
+A1 is the final output (after activation) of L1, with shape(NL1,m)
+
+W2 is the weight parameter of L2, with shape(NL2,NL1)
+
+b2 is the bias parameter of L2, with shape(NL2,1)
+
+Z2 is the linear output of L2, with shape(NL2,m)
+
+A2 is the final output of L2, with shape(NL2,m)`
+
+This rule can be generalized to 
+
+`W[l] with shape(Nl,N[l-1])
+
+b[l] with shape(Nl,1)
+
+Z[l] with shape(Nl,m)
+
+A[l] with shape(Nl,m)`
+
+The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoid(Z1),Z1=W1*X+b1`
 
 
