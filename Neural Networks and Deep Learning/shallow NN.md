@@ -67,7 +67,7 @@ A[l] with shape(Nl,1)
 ```
 
 The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoid(Z1),Z1=W1*x+1`
-## Vectoring across multiple examples
+## Vectorizing across multiple examples
 In this part, take mutiple training examples into consideration. m refers to the number of traning examples.
 
 notation convention: `a[l](i) refers to ith traning example in layer l`
