@@ -1,4 +1,5 @@
-This is the 3rd week of first course, in this week, the learning objective is to >   Learn to build a neural network with one hidden layer, using forward propagation and backpropagation. 
+This is the 3rd week of first course, in this week, the learning objective is to 
+> Learn to build a neural network with one hidden layer, using forward propagation and backpropagation. 
 The main content of this week as follows:
 - [Neural Networks Overview](#neural-networks-overview)
 - [Neural Networks Representation](#neural-networks-representation)
@@ -11,7 +12,7 @@ The main content of this week as follows:
 - [Gradient Descent for Neural Networks](#gradient-descent-for-neural-networks)
 - [Backpropagation Intuition](#backpropagation-ntuition)
 - [Random Initialization](#random-initialization)
-# Neural Networks overview
+## Neural Networks overview
 From previous study, a simple logistic regression can be represented as:
 
 `Z=W*X+b A=sigmoid(Z)`
