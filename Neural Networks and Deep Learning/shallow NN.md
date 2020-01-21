@@ -28,31 +28,31 @@ A NN can be divided by 3 different layers: **Input Layer**(X);**Output Layer**(Y
 
 `# layers NN` '#' is defined by `# of hidden layers + output layers` (Input layer not counted)
 ## Computing a neural network output
-Step by step calculation:
+In this part, we only care about single traning example.
 
-Notation convention: `a[i]j` refers to the jth node of ith layer
+Notation convention: `a[l]j` refers to the jth node of lth layer
 
 ![](images/step.png)
 
-The top part calculate each node in hidden layer, while bottom part vectorizing X,W,b,Z,A.
+The top part calculate each node in hidden layer, while bottom part vectorizing x,W,b,Z,A.
 ```
-X is the input, with shape(Nx,m)
+x is the input, with shape(Nx,1)
 
 W1 is the weight parameter of L1, with shape(NL1,NL0) (Nl refers to the # of node in layer l)
 
 b1 is the bias parameter of L1, with shape(NL1,1)
 
-Z1 is the linear output of L1, with shape(NL1,m)
+Z1 is the linear output of L1, with shape(NL1,1)
 
-A1 is the final output (after activation) of L1, with shape(NL1,m)
+A1 is the final output (after activation) of L1, with shape(NL1,1)
 
 W2 is the weight parameter of L2, with shape(NL2,NL1)
 
 b2 is the bias parameter of L2, with shape(NL2,1)
 
-Z2 is the linear output of L2, with shape(NL2,m)
+Z2 is the linear output of L2, with shape(NL2,1)
 
-A2 is the final output of L2, with shape(NL2,m)
+A2 is the final output of L2, with shape(NL2,1)
 ```
 
 This rule can be generalized to 
@@ -61,11 +61,36 @@ W[l] with shape(Nl,N[l-1])
 
 b[l] with shape(Nl,1)
 
-Z[l] with shape(Nl,m)
+Z[l] with shape(Nl,1)
 
-A[l] with shape(Nl,m)
+A[l] with shape(Nl,1)
 ```
 
+The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoid(Z1),Z1=W1*x+1`
+## Vectoring across multiple examples
+In this part, take mutiple training examples into consideration. m refers to the number of traning examples.
+
+notation convention: `a[l](i) refers to ith traning example in layer l`
+
+![](images/multiple.png)
+
+The step by step calculation can be implemented with a for-loop:
+```
+for i=1 to m:
+    Z[1](i)=W[1]*X[:,i]+b[1]
+    A[1](i)=sigmoid(Z[1](i))
+    Z[2](i)=W[2]*A[1](i)+b[2]
+    A[2](i)=sigmoid(Z[2](i))
+```
+Vectoring X,Z and A:
+
+```
+X is the input, the whole training set, with shape (Nx,m)
+
+Z[l] is the linear output of layer l, with shape(Nl,m)
+
+A[l] is the final output of layer l ,with shape(Nl,m)
+```
 The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoid(Z1),Z1=W1*X+b1`
 
 
