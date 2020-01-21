@@ -2,7 +2,7 @@ This is the 3rd week of first course, in this week, the learning objective is to
 The main content of this week as follows:
 - [Neural Networks Overview](#neural-networks-overview)
 - [Neural Network Representation](#neural-network-representation)
-- [Computing a Neural Network's output](#computing-a-neural-network's-output)
+- [Computing a Neural Network's output](#computing-a-neural-network-output)
 - [Vectorizing across multiple examples](#vectorizing-across-multiple-examples)
 - [Explanation for Vectorized Implementation](#explanation-for-vectorized-implementation)
 - [Activation Function](#activation-function)
@@ -27,7 +27,7 @@ A Neural Network with 1 hidden layer can be represented as (repeat logistic regr
 A NN can be divided by 3 different layers: **Input Layer**(X);**Output Layer**(Y); **Hidden Layer**(layers in bettwen, not visible)
 
 `# layers NN` '#' is defined by `# of hidden layers + output layers` (Input layer not counted)
-## Computing a neural network's output
+## Computing a neural network output
 Step by step calculation:
 
 Notation convention: `a[i]j` refers to the jth node of ith layer
@@ -35,6 +35,7 @@ Notation convention: `a[i]j` refers to the jth node of ith layer
 ![](images/step.png)
 
 The top part calculate each node in hidden layer, while bottom part vectorizing X,W,b,Z,A.
+
 `X is the input, with shape(Nx,m)
 
 W1 is the weight parameter of L1, with shape(NL1,NL0) (Nl refers to the # of node in layer l)
