@@ -16,9 +16,10 @@ From previous study, a simple logistic regression can be represented as:
 
 `Z=W*X+b A=sigmoid(Z)`
 
-![](images/logistic.png)
+![](images/logstic.png)
 
 A Neural Network with 1 hidden layer can be represented as (repeat logistic regression once):
 
 `Z[1]=W[1]*X+b[1] A[1]=sigmoid(Z[1]) Z[2]=W[2]*A[1]+b[2] A[2]=sigmoid(Z[2])`
+
 ![](images/1nn.png)
