@@ -1,7 +1,7 @@
 This is the 3rd week of first course, in this week, the learning objective is to : Learn to build a neural network with one hidden layer, using forward propagation and backpropagation. 
 The main content of this week as follows:
 - [Neural Networks Overview](#neural-networks-overview)
-- [Neural Networks Representation](#neural-networks-representation)
+- [Neural Network Representation](#neural-network-representation)
 - [Computing a Neural Network's output](#computing-a-neural-network's-output)
 - [Vectorizing across multiple examples](#vectorizing-across-multiple-examples)
 - [Explanation for Vectorized Implementation](#explanation-for-vectorized-implementation)
@@ -23,3 +23,11 @@ A Neural Network with 1 hidden layer can be represented as (repeat logistic regr
 `Z[1]=W[1]*X+b[1] A[1]=sigmoid(Z[1]) Z[2]=W[2]*A[1]+b[2] A[2]=sigmoid(Z[2])`
 
 ![](images/1nn.png)
+## Neural Network Representation
+A NN can be divided by 3 different layers: **Input Layer**(X);**Output Layer**(Y); **Hidden Layer**(layers in bettwen, not visible)
+
+`# layers NN` '#' is defined by `# of hidden layers + output layers` (Input layer not counted)
+## Computing a neural network's output
+
+
+
