@@ -4,7 +4,6 @@ The main content of this week as follows:
 - [Neural Network Representation](#neural-network-representation)
 - [Computing a Neural Network's output](#computing-a-neural-network-output)
 - [Vectorizing across multiple examples](#vectorizing-across-multiple-examples)
-- [Explanation for Vectorized Implementation](#explanation-for-vectorized-implementation)
 - [Activation Function](#activation-function)
 - [Why do we need non-linear activation functions](#why-do-we-need-non-linear-activation-function)
 - [Derivatives of activation functions](#derivatives-of-activation-functions)
@@ -92,5 +91,19 @@ Z[l] is the linear output of layer l, with shape(Nl,m)
 A[l] is the final output of layer l ,with shape(Nl,m)
 ```
 The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoid(Z1),Z1=W1*X+b1`
+## Activation Function
+![](images/activation.png)
+
+| Function    | pros | cons|
+| ----------- | ----------- |
+| Sigmoid      | useful in binary output | slow gradient descent when z is small/ large (slope close to 0) |
+| tanh   | mean of output close to 0, centre data for next layer  | slow gradient descent when z is small/ large |
+| RELU   | fast gradient descent as slope is linear when z is positive | slope close to 0 when z is negative |
+|Leaky RELU | small slope (not 0) when z is negative | another learnable parameter to define -- slope when z is negative |
+
+Principles of how to choose activation functions:
+
+- Use sigmoid for binary classification (0/1), others Relu.
+- Find the one better fit with your problem through try-out.
 
 
