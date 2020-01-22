@@ -105,5 +105,6 @@ Principles of how to choose activation functions:
 
 - Use sigmoid for binary classification (0/1), others Relu.
 - Find the one better fit with your problem through try-out.
+## Why do we need non linear activation function
 
 
