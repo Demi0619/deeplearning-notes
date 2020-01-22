@@ -95,7 +95,7 @@ The output computed with vectorizing `y_hat=A2=sigmoid(Z2),Z2=W2*A1+b2,A1=sigmoi
 ![](images/activation.png)
 
 | Function    | pros | cons|
-| ----------- | ----------- |
+| ----------- |: ----------- :|:-------- :|
 | Sigmoid      | useful in binary output | slow gradient descent when z is small/ large (slope close to 0) |
 | tanh   | mean of output close to 0, centre data for next layer  | slow gradient descent when z is small/ large |
 | RELU   | fast gradient descent as slope is linear when z is positive | slope close to 0 when z is negative |
