@@ -155,7 +155,7 @@ Gradient descent for NN
 Repeat {
         compute prediction y_hat[i] for i=1...m
         
-        compute partial derivatives: dw[1],db[1],dw[2],db[2]
+        compute partial derivatives: dw[1],db[1],dw[2],db[2]    # details in below
         
         apply gradient descent:
         
@@ -167,7 +167,8 @@ Repeat {
         
         b[2]:=b[2]-learning_rate*db[2]
 ```
-        
+Formulas for computing derivatives
+![](images/formulas.png)
  
  
  
