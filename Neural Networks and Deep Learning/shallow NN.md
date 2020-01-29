@@ -106,5 +106,100 @@ Principles of how to choose activation functions:
 - Use sigmoid for binary classification (0/1), others Relu.
 - Find the one better fit with your problem through try-out.
 ## Why do we need non linear activation function
+If there is no activation function or alternatively, linear activation function, then no matterhow many hidden layers, the output will be linear and thus cannot handle more complex problems like logistic regression.
+
+Linear activation function might be used in one place -- the output layer of regerssion problem.
+
+## Derivatives of activation function
+Derivative of sigmoid function
+```
+g(z)=1/(1+np.exp(-z))
+
+g'(z)=g(z)*(1-g(z))
+```
+Derivative of tanh function
+```
+g(z)=(np.exp(z)-np.exp(-z))/(np.exp(z)+np.exp(-z))
+
+g'(z)=1-g(z)^2
+```
+Derivative of Relu
+```
+g(z)=max(0,z)=0 if z<0,z if z>=0
+
+g'(z)=0 if z<0, 1 if z>=0
+```
+Derivative of Leaky Relu
+```
+g(z)=max(0.01z,z)
+
+g'(z)=0.01 if z<0, 1 if z>=0
+```
+## Gradient descent for neural networks
+shadow NN with 2 layers
+
+cost function:`J=(1/m)*sum(L(y[i],y_hat[i]))`
+
+parameters:
+```
+W1 is the weight parameter of L1, with shape(NL1,NL0) (Nl refers to the # of node in layer l)
+
+b1 is the bias parameter of L1, with shape(NL1,1)
+
+W2 is the weight parameter of L2, with shape(NL2,NL1)
+
+b2 is the bias parameter of L2, with shape(NL2,1)
+```
+Gradient descent for NN
+```
+Repeat {
+        compute prediction y_hat[i] for i=1...m
+        
+        compute partial derivatives: dw[1],db[1],dw[2],db[2]
+        
+        apply gradient descent:
+        
+        w[1]:= w[1]-learning_rate*dw[1]
+        
+        b[1]:= b[1]-learning_rate*db[1]
+        
+        w[2]:= w[2]-learning_rate*dw[2]
+        
+        b[2]:=b[2]-learning_rate*db[2]
+```
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
