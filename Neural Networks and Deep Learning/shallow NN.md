@@ -8,7 +8,7 @@ The main content of this week as follows:
 - [Why do we need non-linear activation functions](#why-do-we-need-non-linear-activation-function)
 - [Derivatives of activation functions](#derivatives-of-activation-functions)
 - [Gradient Descent for Neural Networks](#gradient-descent-for-neural-networks)
-- [Backpropagation Intuition](#backpropagation-ntuition)
+- [Backpropagation Intuition](#backpropagation-intuition)
 - [Random Initialization](#random-initialization)
 ## Neural Networks overview
 From previous study, a simple logistic regression can be represented as:
@@ -136,7 +136,7 @@ g(z)=max(0.01z,z)
 g'(z)=0.01 if z<0, 1 if z>=0
 ```
 ## Gradient descent for neural networks
-shadow NN with 2 layers
+shallow NN with 2 layers
 
 cost function:`J=(1/m)*sum(L(y[i],y_hat[i]))`
 
@@ -177,7 +177,24 @@ How do we calculate the derivatives (the backpropagation process)
 Vectorizing to m examples
 
 ![](images/intuition2.png)
- 
+## Random initialization
+Why not initialize parameters with zeros (initialize bias terms b to 0 is ok, but initialize w to 0 is a problem):
+- all hidden units in a certain layer are the same (computing the same function)
+- after every single iteration, the hidden units are updated the same way, thus still computing the same function.
+
+How to randomly initializing parameters:
+```
+W[1]=np.random((NL1,NL0))*0.01
+
+b[1]=np.zeros((NL1,1))
+
+w[2]=np.random((NL2,NL1))*0.01
+
+b[1]=np.zeros((NL2,1))
+```
+Why multiply 0.01 with the random initialized w?
+
+To make W small enough, the Z=W*X+b will be smaller, the A=g(z) is smaller, if g is sigmoid, g'(z) is bigger, thus make the training quiker.
  
  
  
