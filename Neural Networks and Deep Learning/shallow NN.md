@@ -169,7 +169,14 @@ Repeat {
 ```
 Formulas for computing derivatives
 ![](images/formulas.png)
- 
+## Backpropagation intuition 
+How do we calculate the derivatives (the backpropagation process)
+
+![](images/intuition.png)
+
+Vectorizing to m examples
+
+![](images/intuition2.png)
  
  
  
